@@ -2,13 +2,11 @@
 pragma solidity ^0.8.13;
 
 contract Counter {
-    uint256 public number;
 
-    function setNumber(uint256 newNumber) public {
-        number = newNumber;
-    }
-
-    function increment() public {
-        number++;
-    }
+	function getUintArray() external pure returns (uint256[] memory arr) {
+		arr = new uint256[](3);
+		for (uint256 i; i < 3; i++) {
+			arr[i] = i;
+		}
+	}
 }
